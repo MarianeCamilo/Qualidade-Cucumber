@@ -10,12 +10,12 @@ Cenário: Enviar um envelope pelo S-Sign
     E o usuário clicou no botão Entrar
     E o usuário clicou na aba S-Sign
     Quando o usuário clicar no botão Novo Envelope
-    Quando o usuário insirir o arquivo "TESTE.pdf"
+    Quando o usuário inserir o arquivo "TESTE.pdf"
     E clicar no botão Próximo
     Quando o usuário alterar o Título do Envelope para "Meu primeiro envelope."
-    E insirir a Data de Expiração do Envelope para a data atual
+    E inserir a Data de Expiração do Envelope para a data atual
     E manter o Idioma do Envelope em Português
-    E não insirir nenhum Segmento
+    E não inserir nenhum Segmento
     E não escrever nenhuma Mensagem
     E clicar no botão Próximo
     Quando o usuário clicar no botão Adicionar
