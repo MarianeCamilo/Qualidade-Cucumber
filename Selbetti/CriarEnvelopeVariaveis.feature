@@ -405,7 +405,7 @@ Cenário: Criação de Envelope com múltiplos Documentos com múltiplos Signata
     Então o envelope será enviado aos signatários
     E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido no menu Enviados
-
+ESSE EU JÁ PASSEI PRO SPECFLOW
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
 Cenário: Criação de Envelope com múltiplos Documentos com múltiplos Signatarios assinatura digital e sem Rubrica com assinaturas posicionadas (sem rúbrica obrigatório)
