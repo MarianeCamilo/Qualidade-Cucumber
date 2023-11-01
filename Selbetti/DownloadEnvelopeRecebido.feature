@@ -1,6 +1,5 @@
 
 
-
 Cenário: Download de Envelope original na etapa Assinar
 
     Dado que o usuário já preencheu o campo email
