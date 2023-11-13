@@ -1,4 +1,5 @@
 
+
 Cenario: Criação de Envelope com um Documento com um signatário assinatura Eletrônica e Sem Rúbricas
     
     Dado que o usuário já preencheu o campo email
@@ -28,6 +29,7 @@ Cenario: Criação de Envelope com um Documento com um signatário assinatura El
     Então o envelope será enviado ao signatário
     E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Cenario: Criação de Envelope com um Documento com um signatário assinatura Eletrônica e Com Rúbricas
