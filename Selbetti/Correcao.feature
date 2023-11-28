@@ -776,11 +776,9 @@ Cenário: TCV-56 Criação de Envelope com múltiplos Documentos Unificados com 
 	E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página do documento
-    E o sistema não disponibilizar os carimbos de rúbricas
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
-    Então o envelope será enviado ao signatário
-    E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+    Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
     E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
     E o sistema deverá exibir o Envelope
@@ -792,7 +790,7 @@ Cenário: TCV-56 Criação de Envelope com múltiplos Documentos Unificados com 
     E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
     E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
     E o usuário deverá verificar se o Signatário confere com o Signatário que foi enviado o Envelope
-    E o usuário deverá verificar se o Documento anexado confere com o mesmo Documento que foi inserido na criação do Envelope
+    E o título do documento anexado deverá ser exibido
     E o usuário deverá clicar no botão Editar do Envelope
     E o usuário deverá clicar na aba Signatários
     E o sistema deverá exibir o Tipo de Assinatura do Signatário
@@ -827,15 +825,15 @@ Cenário: TCV-69 | Criação de Envelope com múltiplos Documentos Unificados co
     E clicar no ícone de Lápis para definir tipo de assinatura
     E selecionar o tipo de assinatura Digital + Eletrônica
     Quando o usuário clicar no botão Ajustar ordem de assinatura
+    E habilitar o toggle Habilitar ordem de assinatura
     E definir a ordem de assinaturas em ordem crescente para os signatários
-	E clicar no no botão Próximo na etapa Signatário
+    E clicar no botão Alterar na modal Ordem de assinatura
+    E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página do documento
-    E o sistema não disponibilizar os carimbos de rúbricas
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
-    Então o envelope será enviado ao signatário
-    E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+    Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
     E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
     E o sistema deverá exibir o Envelope
@@ -847,7 +845,7 @@ Cenário: TCV-69 | Criação de Envelope com múltiplos Documentos Unificados co
     E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
     E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
     E o usuário deverá verificar se o Signatário confere com o Signatário que foi enviado o Envelope
-    E o usuário deverá verificar se o Documento anexado confere com o mesmo Documento que foi inserido na criação do Envelope
+    E o título do documento anexado deverá ser exibido
     E o usuário deverá clicar no botão Editar do Envelope
     E o usuário deverá clicar na aba Signatários
     E o sistema deverá exibir o Tipo de Assinatura do Signatário
@@ -885,11 +883,9 @@ Cenário: TCV-70 | Criação de Envelope com múltiplos Documentos Unificados co
 	E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página do documento
-    E o sistema não disponibilizar os carimbos de rúbricas
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
-    Então o envelope será enviado ao signatário
-    E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+    Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
     E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
     E o sistema deverá exibir o Envelope
@@ -901,7 +897,7 @@ Cenário: TCV-70 | Criação de Envelope com múltiplos Documentos Unificados co
     E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
     E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
     E o usuário deverá verificar se o Signatário confere com o Signatário que foi enviado o Envelope
-    E o usuário deverá verificar se o Documento anexado confere com o mesmo Documento que foi inserido na criação do Envelope
+    E o título do documento anexado deverá ser exibido
     E o usuário deverá clicar no botão Editar do Envelope
     E o usuário deverá clicar na aba Signatários
     E o sistema deverá exibir o Tipo de Assinatura do Signatário
@@ -933,11 +929,9 @@ Cenário: TCV-76 | Criação de Envelope com envio de token de autenticação co
 	E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página do documento
-    E o sistema não disponibilizar os carimbos de rúbricas
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
-    Então o envelope será enviado ao signatário
-    E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+    Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
     E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
     E o sistema deverá exibir o Envelope
@@ -981,16 +975,16 @@ Cenário: TCV-80 | Criação de Envelope com envio de token de autenticação co
     E clicar no ícone de Lápis para definir tipo de assinatura
     E selecionar o tipo de assinatura Digital
     Quando o usuário clicar no botão Ajustar ordem de assinatura
+    E habilitar o toggle Habilitar ordem de assinatura
     E definir a ordem de assinaturas em ordem crescente para os signatários
+    E clicar no botão Alterar na modal Ordem de assinatura
     E habilitar o toggle Autenticação de Acesso
 	E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página do documento
-    E o sistema não disponibilizar os carimbos de rúbricas
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
-    Então o envelope será enviado ao signatário
-    E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+    Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
     E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
     E o sistema deverá exibir o Envelope
@@ -1039,11 +1033,9 @@ Cenário: TCV-81 | Criação de Envelope com envio de token de autenticação co
 	E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página do documento
-    E o sistema não disponibilizar os carimbos de rúbricas
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
-    Então o envelope será enviado ao signatário
-    E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+    Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
     E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
     E o sistema deverá exibir o Envelope
@@ -1087,16 +1079,16 @@ Cenário: TCV-94 | Criação de Envelope com envio de token de autenticação co
     E clicar no ícone de Lápis para definir tipo de assinatura
     E selecionar o tipo de assinatura Digital + Eletrônica
     Quando o usuário clicar no botão Ajustar ordem de assinatura
+    E habilitar o toggle Habilitar ordem de assinatura
     E definir a ordem de assinaturas em ordem crescente para os signatários
+    E clicar no botão Alterar na modal Ordem de assinatura
     E habilitar o toggle Autenticação de Acesso
 	E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página do documento
-    E o sistema não disponibilizar os carimbos de rúbricas
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
-    Então o envelope será enviado ao signatário
-    E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+    Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
     E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
     E o sistema deverá exibir o Envelope
@@ -1145,11 +1137,9 @@ Cenário: TCV-95 | Criação de Envelope com envio de token de autenticação co
 	E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página do documento
-    E o sistema não disponibilizar os carimbos de rúbricas
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
-    Então o envelope será enviado ao signatário
-    E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+    Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
     E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
     E o sistema deverá exibir o Envelope
