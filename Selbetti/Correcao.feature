@@ -119,10 +119,9 @@ Cenário: TCV-6 | Criação de Envelope com um Documento com múltiplos signatá
     E clicar no botão Adicionar na modal Adicionar Signatário à Lista
     E selecionar os Signatários
     E clicar no ícone de Lápis para definir tipo de assinatura
-    E selecionar o tipo de assinatura Digital
+    E selecionar o Tipo de Assinatura: "Digital"
     E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
-    E o sistema carregar os Carimbos de Assinatura na ultima página do documento
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
     Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."

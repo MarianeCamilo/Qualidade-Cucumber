@@ -15,23 +15,23 @@ Cenário: TCV-10 | Assinatura eletronica deve ficar disponível pelo portal de v
     E não escrever nenhuma Mensagem
     E clicar no botão Próximo na etapa Configurar
     Quando o usuário clicar no botão Adicionar
-    E selecionar o Signatário: "A.Eletronica Digital"
+    E selecionar o Signatário: "Testes Manuais"
     E clicar no botão Adicionar na modal Adicionar Signatário à Lista
     E selecionar o Signatário
     E clicar no ícone de Lápis para definir Tipo de Assinatura
     E selecionar o Tipo de Assinatura: "Eletrônica"
 	E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
-    E o sistema carregar os Carimbos de Assinatura na ultima página do documento
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
     E o envelope deverá ser enviado ao Signatário via e-mail
     E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
-    Quando o usuário acessar o e-mail de notificação de Envelope para Assinar
-    E clicar no botão Acessar Documento
-    E clicar no botão Assinar
-    E clicar no botão Aplicar
+    Quando o usuário acessar o menu Recebidos
+    E localizar o envelope que foi recebido
+    E clicar no botão Assinar no card do Envelope
+    E clicar no botão Assinar na Página de Assinatura
+    E clicar no botão Aplicar na modal Assinatura eletrônica
     Então o sistema deverá exibir a tela de conclusão de Assinatura
     E o sistema deverá enviar um e-mail de conclusão de Assinatura com o link de validação
     E o usuário deverá acessar o e-mail de conclusão de Assinatura
@@ -60,24 +60,24 @@ Cenário: TCV-11 | Assinatura eletronica deve ficar disponível pelo portal de v
     E não escrever nenhuma Mensagem
     E clicar no botão Próximo na etapa Configurar
     Quando o usuário clicar no botão Adicionar
-    E selecionar o Signatário: "A.Eletronica Digital"
+    E selecionar o Signatário: "Testes Manuais"
     E clicar no botão Adicionar na modal Adicionar Signatário à Lista
     E selecionar o Signatário
     E clicar no ícone de Lápis para definir Tipo de Assinatura
     E selecionar o Tipo de Assinatura: "Eletrônica"
 	E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
-    E o sistema carregar os Carimbos de Assinatura na ultima página do documento
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
     E o envelope deverá ser enviado ao Signatário via e-mail
     E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
-    Quando o usuário acessar o e-mail de notificação de Envelope para Assinar
-    E clicar no botão Acessar Documento
-    E clicar no botão Assinar
-    E clicar no botão Aplicar
-    E o usuário acessar a aba Concluídos no menu Enviados
+    Quando o usuário acessar o menu Recebidos
+    E localizar o envelope que foi recebido
+    E clicar no botão Assinar no card do Envelope
+    E clicar no botão Assinar na Página de Assinatura
+    E clicar no botão Aplicar na modal Assinatura eletrônica
+    Quando o usuário acessar a aba Concluídos no menu Enviados
     E o usuário pesquisar pelo Envelope
     E o usuário clicar no botão Detalhar do Envelope
     E o usuário clicar no botão Impressão
