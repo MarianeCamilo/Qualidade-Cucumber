@@ -121,10 +121,11 @@ Cenário: TCV-12 | Assinatura eletronica deve ficar disponível pelo portal de v
     E o envelope deverá ser enviado ao Signatário via e-mail
     E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
-    Quando o usuário acessar o e-mail de notificação de Envelope para Assinar
-    E clicar no botão Acessar Documento
-    E clicar no botão Assinar
-    E clicar no botão Aplicar
+    Quando o usuário acessar o menu Recebidos
+    E localizar o envelope que foi recebido
+    E clicar no botão Assinar no card do Envelope
+    E clicar no botão Assinar na Página de Assinatura
+    E clicar no botão Aplicar na modal Assinatura eletrônica
     E acessar a aba Concluídos no menu Enviados
     E pesquisar pelo Envelope
     E clicar no botão Detalhar do Envelope
@@ -285,3 +286,5 @@ Cenário: TCV-15 | Assinatura eletronica presencial deve ficar disponível pelo 
     E o sistema deverá exibir a mensagem: "Os documentos estão devidamente assinados." na modal Detalhes dos documentos
     E o sistema deverá exibir o Nome do Signatário na modal Detalhes dos documentos
     E o sistema deverá exibir o E-mail do Signatário na modal Detalhes dos documentos
+
+    

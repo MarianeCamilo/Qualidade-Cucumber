@@ -165,10 +165,10 @@ Cenario: TCV-7 | Criação de Envelope com um Documento com múltiplos signatár
     E clicar no botão Adicionar na modal Adicionar Signatário à Lista
     E selecionar os Signatários
     E clicar no ícone de Lápis para definir tipo de assinatura
-    E selecionar o tipo de assinatura Digital
+    E selecionar o Tipo de Assinatura: "Digital"
     E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
-    E o sistema carregar os Carimbos de Assinatura na ultima página do documento
+    E posicionar as assinaturas dos signatários na página do viewer
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
     Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
@@ -212,7 +212,7 @@ Cenario: Criação de Envelope com um Documento com múltiplos signatários assi
     E clicar no botão Adicionar na modal Adicionar Signatário à Lista
     E selecionar os Signatários
     E clicar no ícone de Lápis para definir tipo de assinatura
-    E selecionar o tipo de assinatura Digital
+    E selecionar o Tipo de Assinatura: "Digital"
     E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página do documento
@@ -244,36 +244,39 @@ Cenario: TCV-19 | Criação de Envelope com um Documento com múltiplos signatá
     Dado que o usuário já preencheu o campo email
     E já preencheu o campo senha
     E clicou no botão Entrar
-    E clicou no botão Sign
+    E clicou no botão S-Sign
     Quando o usuário clicar no botão Novo Envelope
     E inserir o arquivo: "DocumentoUnico.PDF"
     E clicar no botão Próximo na etapa Upload
-    Quando o usuário preencher o Título do Envelope
+    E o usuário preencher o Título do Envelope
     E inserir a Data de Expiração do Envelope para a data atual
-    E manter o Idioma do Envelope em Português
+    E selecionar o Idioma: "Português"
     E não inserir nenhum Segmento
     E não escrever nenhuma Mensagem
     E clicar no botão Próximo na etapa Configurar
     Quando o usuário clicar no botão Adicionar
-    E selecionar o Signatário: "A.Eletronica Digital"
-    E selecionar o Signatário: "B.Eletronica Digital"
-    E selecionar o Signatário: "C.Eletronica Digital"
-    E clicar no botão Adicionar na modal Adicionar Signatário à Lista
-    E selecionar os Signatários
+    E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signtários à Lista
+    E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signtários à Lista
+    E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signtários à Lista
+    E clicar no botão Adicionar à Lista de Signatários
+    E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signtários do Envelope
+    E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signtários do Envelope
+    E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signtários do Envelope
     E clicar no ícone de Lápis para definir tipo de assinatura
-    E selecionar o tipo de assinatura Digital + Eletrônica
-    Quando o usuário clicar no botão Ajustar ordem de assinatura
-    E habilitar o toggle Habilitar ordem de assinatura
-    E definir a ordem de assinaturas em ordem crescente para os signatários
+    E selecionar o Tipo de Assinatura: @Parameter1
+    Quando o usuário clicar no botão Ajustar Ordem de Assinatura
+    E habilitar o toggle Habilitar Ordem de Assinatura
+    E o usuário definir a ordem "1" para o Signatário "A.Eletronica Digital" 
+    E o usuário definir a ordem "2" para o Signatário "B.Eletronica Digital" 
+    E o usuário definir a ordem "3" para o Signatário "C.Eletronica Digital" 
     E clicar no botão Alterar na modal Ordem de assinatura
-    E clicar no no botão Próximo na etapa Signatário
+    E clicar no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
-    E o sistema carregar os Carimbos de Assinatura na ultima página do documento
     E o usuário clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
     Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
-    E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
-    E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
+    E o usuário acessar o Menu Enviados
+    E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
     E o sistema deverá exibir o Envelope
     E o usuário deverá clicar no botão Detalhar do Envelope
     E o sistema deverá exibir as informações do Envelope
@@ -281,14 +284,18 @@ Cenario: TCV-19 | Criação de Envelope com um Documento com múltiplos signatá
     E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
     E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
     E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
-    E o usuário deverá verificar se os Signatários conferem com os Signatários que foram enviados o Envelope
-    E o título do documento anexado deverá ser exibido
+    E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Datalhes no Envelope
+    E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Datalhes no Envelope
+    E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Datalhes no Envelope
+    E o sistema deverá exibir o documento anexado "DocumentoUnico.pdf"
     E o usuário deverá clicar no botão Editar do Envelope
-    E o usuário deverá clicar na aba Signatários
-    E o sistema deverá exibir o Tipo de Assinatura dos Signatários
-    E o usuário deverá verificar se o Tipo de Assinatura dos Signatários confere com o mesmo Tipo de Assinatura que foi definido na criação do Envelope
-    E o sistema deverá exibir a Ordem de Assinatura dos Signatários
-    E o usuário deverá verificar se a Ordem de Assinatura dos Signatários confere com a Ordem que foi definida na criação do Envelope
+    E o usuário deverá clicar na aba Signatários na Edição do Envelope
+    E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+    E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+    E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+    E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Ordem de Assinatura "1"
+    E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Ordem de Assinatura "2"
+    E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Ordem de Assinatura "3"
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
@@ -340,7 +347,7 @@ Cenario: TCV-20 | Criação de Envelope com um Documento com múltiplos signatá
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-Cenario: Criação de Envelope com um Documento com múltiplos signatários com assinatura Digital + Eletrônica com assinaturas posicionadas (sem rúbrica obrigatório)
+Cenario: TCV-21 | Criação de Envelope com um Documento com múltiplos signatários com assinatura Digital + Eletrônica com assinaturas posicionadas (sem rúbrica obrigatório)
 
     Dado que o usuário já preencheu o campo email
     E já preencheu o campo senha
@@ -362,12 +369,11 @@ Cenario: Criação de Envelope com um Documento com múltiplos signatários com 
     E clicar no botão Adicionar na modal Adicionar Signatário à Lista
     E selecionar os Signatários
     E clicar no ícone de Lápis para definir tipo de assinatura
-    E selecionar o tipo de assinatura Digital + Eletrônica
+    E selecionar o Tipo de Assinatura: "Eletrônica ou Digital"
     E clicar no no botão Próximo na etapa Signatário
     Quando o usuário habilitar o Toggle Carregar Assinaturas
-    E o sistema carregar os Carimbos de Assinatura na ultima página do documento
-    E o sistema não disponibilizar os carimbos de rúbricas
-    E o usuário clicar no botão Próximo na etapa Assinatura
+    E posicionar as assinaturas dos signatários na página do viewer
+    E clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
     Então o envelope será enviado aos signatários
     E o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
@@ -520,6 +526,55 @@ Cenario: TCV-31 | Criação de Envelope com múltiplos Documentos com múltiplos
     Quando o usuário habilitar o Toggle Carregar Assinaturas
     E o sistema carregar os Carimbos de Assinatura na ultima página dos documentos
     E o usuário clicar no botão Próximo na etapa Assinatura
+    Quando o usuário clicar no botão Enviar na etapa Revisar
+    Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+    E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
+    E o usuário deverá pesquisar pelo título do Envelope na aba Em Assinatura
+    E o sistema deverá exibir o Envelope
+    E o usuário deverá clicar no botão Detalhar do Envelope
+    E o sistema deverá exibir as informações do Envelope
+    E o usuário deverá verificar se o Criador confere com o criador do Envelope
+    E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+    E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+    E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+    E o usuário deverá verificar se os Signatários conferem com os Signatários que foram enviados o Envelope
+    E o título do documento anexado deverá ser exibido
+    E o usuário deverá clicar no botão Editar do Envelope
+    E o usuário deverá clicar na aba Signatários
+    E o sistema deverá exibir o Tipo de Assinatura dos Signatários
+    E o usuário deverá verificar se o Tipo de Assinatura dos Signatários confere com o mesmo Tipo de Assinatura que foi definido na criação do Envelope
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+Cenario: TCV-32 | Criação de Envelope com múltiplos Documentos com múltiplos Signatarios assinatura digital e sem Rubrica com assinaturas posicionadas (sem rúbrica obrigatório)
+
+    Dado que o usuário já preencheu o campo email
+    E já preencheu o campo senha
+    E clicou no botão Entrar
+    E clicou no botão Sign
+    Quando o usuário clicar no botão Novo Envelope
+    E inserir o arquivo: "DocumentoTeste1.PDF"
+    E inserir o arquivo: "DocumentoTeste2.PDF"
+    E inserir o arquivo: "DocumentoTeste3.PDF"
+    E clicar no botão Próximo na etapa Upload
+    Quando o usuário preencher o Título do Envelope
+    E inserir a Data de Expiração do Envelope para a data atual
+    E manter o Idioma do Envelope em Português
+    E não inserir nenhum Segmento
+    E não escrever nenhuma Mensagem
+    E clicar no botão Próximo na etapa Configurar
+    Quando o usuário clicar no botão Adicionar
+    E selecionar o Signatário: "A.Eletronica Digital"
+    E selecionar o Signatário: "B.Eletronica Digital"
+    E selecionar o Signatário: "C.Eletronica Digital"
+    E clicar no botão Adicionar na modal Adicionar Signatário à Lista
+    E selecionar os Signatários
+    E clicar no ícone de Lápis para definir tipo de assinatura
+    E selecionar o Tipo de Assinatura: "Digital"
+    E clicar no no botão Próximo na etapa Signatário
+    Quando o usuário habilitar o Toggle Carregar Assinaturas
+    E posicionar as assinaturas dos signatários na página do viewer
+    E clicar no botão Próximo na etapa Assinatura
     Quando o usuário clicar no botão Enviar na etapa Revisar
     Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
     E o envelope deverá ser exibido na aba Em Assinatura no menu Enviados
