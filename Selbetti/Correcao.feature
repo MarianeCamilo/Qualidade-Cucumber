@@ -1212,6 +1212,649 @@ Cenário: TCV-95 | Criação de Envelope com envio de token de autenticação co
     E o usuário deverá verificar se o Tipo de Assinatura do Signatário confere com o mesmo Tipo de Assinatura que foi definido na criação do Envelope
     E o sistema deverá exibir o toggle Autenticação de acesso habilitado
 //---------------------------------------------------------------------------------------------------------------------------------------------
+Cenário: TCV-97 | Criação de Envelope com envio de token de autenticação com múltiplos signatários assinatura digital + assinatura eletrônica
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoUnico.PDF"
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signtários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signtários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Eletrônica ou Digital"
+E habilitar o toggle Autenticação de Acesso
+E clicar no botão Próximo na etapa Signatário
+Quando o usuário habilitar o Toggle Carregar Assinaturas
+Então o usuário validar se o toggle Carregar rubricas estará "desabilitado"
+Quando o usuário clicar no botão Próximo na etapa Assinatura
+E o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoUnico.pdf"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o toggle de Autenticação de Acesso habilitado
+
+Cenário: TCV-94 | Criação de Envelope com envio de token de autenticação com múltiplos signatários assinatura digital + assinatura eletrônica com ordem de assinatura
+Cenário: TCV-95 | Criação de Envelope com envio de token de autenticação com múltiplos signatários assinatura digital + assinatura eletrônica sem ordem de assinatura
+
+Cenário: TCV-96 | Criação de Envelope com envio de token de autenticação com múltiplos signatários assinatura digital + assinatura eletrônica com assinaturas posicionadas
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoUnico.PDF"
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signtários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signtários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Eletrônica ou Digital"
+E habilitar o toggle Autenticação de Acesso
+E clicar no botão Próximo na etapa Signatário
+Quando clicar no botão Selecione o Signatário
+E selecionar o Signatário "A.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "A.Eletronica Digital" no EixoX "10" e EixoY "100"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "B.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "B.Eletronica Digital" no EixoX "10" e EixoY "200"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "C.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "C.Eletronica Digital" no EixoX "10" e EixoY "300"
+Então o usuário validar se o toggle Carregar rubricas estará "desabilitado"
+Quando o usuário clicar no botão Próximo na etapa Assinatura
+E o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoUnico.pdf"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o toggle de Autenticação de Acesso habilitado
+//---------------------------------------------------------------------------------------------------------------------------------------------
+Cenário: TCV-81 | Criação de Envelope com envio de token de autenticação com múltiplos signatários assinatura digital sem ordem de assinatura
+Cenário: TCV-83 | Criação de Envelope com envio de token de autenticação com múltiplos signatários assinatura digital
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoUnico.PDF"
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signtários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signtários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Digital"
+E habilitar o toggle Autenticação de Acesso
+E clicar no botão Próximo na etapa Signatário
+Quando o usuário habilitar o Toggle Carregar Assinaturas
+Então o usuário validar se o toggle Carregar rubricas estará "desabilitado"
+Quando o usuário clicar no botão Próximo na etapa Assinatura
+E o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoUnico.pdf"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o toggle de Autenticação de Acesso habilitado
+//---------------------------------------------------------------------------------------------------------------------------------------------
+Cenário: TCV-96 | Criação de Envelope com envio de token de autenticação com múltiplos signatários assinatura digital + assinatura eletrônica com assinaturas posicionadas
+Cenário: TCV-82 | Criação de Envelope com envio de token de autenticação com múltiplos signatários assinatura digital com assinaturas posicionadas
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoUnico.PDF"
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signtários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signtários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Digital"
+E habilitar o toggle Autenticação de Acesso
+E clicar no botão Próximo na etapa Signatário
+Quando clicar no botão Selecione o Signatário
+E selecionar o Signatário "A.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "A.Eletronica Digital" no EixoX "10" e EixoY "100"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "B.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "B.Eletronica Digital" no EixoX "10" e EixoY "200"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "C.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "C.Eletronica Digital" no EixoX "10" e EixoY "300"
+Então o usuário validar se o toggle Carregar rubricas estará "desabilitado"
+Quando o usuário clicar no botão Próximo na etapa Assinatura
+E o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoUnico.pdf"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o toggle de Autenticação de Acesso habilitado
+//---------------------------------------------------------------------------------------------------------------------------------------------
+Cenário: TCV-70 | Criação de Envelope com múltiplos documentos unificados com múltiplos signatários assinatura digital + assinatura eletrônica sem ordem de assinatura
+Cenário: TCV-72 | Criação de Envelope com múltiplos Documentos Unificados com múltiplos Signatários assinatura digital + assinatura eletrônica
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoTeste01.PDF"
+E inserir o arquivo: "DocumentoTeste02.PDF"
+E inserir o arquivo: "DocumentoTeste03.PDF"
+E o usuário habilitar o Toggle Unificar Anexos
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signatários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signatários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signatários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signatários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signatários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signatários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Eletrônica ou Digital"
+E clicar no botão Próximo na etapa Signatário
+Quando o usuário habilitar o Toggle Carregar Assinaturas
+Então o usuário deverá validar se o toggle Carregar rubricas estará "desabilitado"
+E o usuário clicar no botão Próximo na etapa Assinatura
+Quando o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoTeste01 | DocumentoTeste02 | DocumentoTeste03.pdf"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o usuário deverá verificar se a coluna Ordem não seja exibida
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+//---------------------------------------------------------------------------------------------------------------------------------------------
+Cenário: TCV-72 | Criação de Envelope com múltiplos Documentos Unificados com múltiplos Signatários assinatura digital + assinatura eletrônica
+Cenário: TCV-71 | Criação de Envelope com múltiplos Documentos Unificados com múltiplos Signatários assinatura digital + assinatura eletrônica com assinaturas posicionadas
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoTeste01.PDF"
+E inserir o arquivo: "DocumentoTeste02.PDF"
+E inserir o arquivo: "DocumentoTeste03.PDF"
+E o usuário habilitar o Toggle Unificar Anexos
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signatários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signatários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signatários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signatários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signatários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signatários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Eletrônica ou Digital"
+E clicar no botão Próximo na etapa Signatário
+Quando clicar no botão Selecione o Signatário
+E selecionar o Signatário "A.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "A.Eletronica Digital" no EixoX "10" e EixoY "100"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "B.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "B.Eletronica Digital" no EixoX "10" e EixoY "200"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "C.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "C.Eletronica Digital" no EixoX "10" e EixoY "300"
+Então o usuário deverá validar se o toggle Carregar rubricas estará "desabilitado"
+E o usuário clicar no botão Próximo na etapa Assinatura
+Quando o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoTeste01 | DocumentoTeste02 | DocumentoTeste03.pdf"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o usuário deverá verificar se a coluna Ordem não seja exibida
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-58 | Criação de Envelope com múltiplos Documentos Unificados com múltiplos Signatários assinatura digital sem assinaturas posicionadas
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoTeste01.PDF"
+E inserir o arquivo: "DocumentoTeste02.PDF"
+E inserir o arquivo: "DocumentoTeste03.PDF"
+E o usuário habilitar o Toggle Unificar Anexos
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signatários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signatários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signatários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signatários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signatários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signatários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Digital"
+E clicar no botão Próximo na etapa Signatário
+Quando o usuário habilitar o Toggle Carregar Assinaturas
+Então o usuário deverá validar se o toggle Carregar rubricas estará "desabilitado"
+E o usuário clicar no botão Próximo na etapa Assinatura
+Quando o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoTeste01 | DocumentoTeste02 | DocumentoTeste03.pdf"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o usuário deverá verificar se a coluna Ordem não seja exibida
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Digital"
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+Cenário: TCV-47 | Criação de Envelope com múltiplos Documentos com múltiplos Signatários assinatura digital + assinatura eletrônica
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoTeste01.PDF"
+E inserir o arquivo: "DocumentoTeste02.PDF"
+E inserir o arquivo: "DocumentoTeste03.PDF"
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signtários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signtários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Eletrônica ou Digital"
+E clicar no botão Próximo na etapa Signatário
+Quando o usuário habilitar o Toggle Carregar Assinaturas
+E o usuário clicar no botão Próximo na etapa Assinatura
+Quando o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoTeste01.PDF"
+E o sistema deverá exibir o documento anexado "DocumentoTeste02.PDF"
+E o sistema deverá exibir o documento anexado "DocumentoTeste03.PDF"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-33 | Criação de Envelope com múltiplos Documentos com múltiplos Signatários assinatura digital
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoTeste01.PDF"
+E inserir o arquivo: "DocumentoTeste02.PDF"
+E inserir o arquivo: "DocumentoTeste03.PDF"
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signtários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signtários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Digital"
+E clicar no botão Próximo na etapa Signatário
+Quando o usuário habilitar o Toggle Carregar Assinaturas
+Então o usuário deverá validar se o toggle Carregar rubricas estará "desabilitado"
+E o usuário clicar no botão Próximo na etapa Assinatura
+Quando o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoTeste01.PDF"
+E o sistema deverá exibir o documento anexado "DocumentoTeste02.PDF"
+E o sistema deverá exibir o documento anexado "DocumentoTeste03.PDF"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Digital"
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-46 | Criação de Envelope com múltiplos Documentos com múltiplos Signatários assinatura digital + assinatura eletrônica com assinaturas posicionadas
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoTeste01.PDF"
+E inserir o arquivo: "DocumentoTeste02.PDF"
+E inserir o arquivo: "DocumentoTeste03.PDF"
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signtários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signtários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signtários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signtários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Eletrônica ou Digital"
+E clicar no botão Próximo na etapa Signatário
+Quando clicar no botão Selecione o Signatário
+E selecionar o Signatário "A.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "A.Eletronica Digital" no EixoX "10" e EixoY "100"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "B.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "B.Eletronica Digital" no EixoX "10" e EixoY "200"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "C.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "C.Eletronica Digital" no EixoX "10" e EixoY "300"
+Então o usuário validar se o toggle Carregar rubricas estará "desabilitado"
+Quando o usuário clicar no botão Próximo na etapa Assinatura
+E o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoTeste01.PDF"
+E o sistema deverá exibir o documento anexado "DocumentoTeste02.PDF"
+E o sistema deverá exibir o documento anexado "DocumentoTeste03.PDF"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Eletrônica Ou Digital"
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-57 | Criação de Envelope com múltiplos Documentos Unificados com múltiplos Signatários assinatura digital com assinaturas posicionadas
+Dado que o usuário já preencheu o campo email
+E já preencheu o campo senha
+E clicou no botão Entrar
+E clicou no botão S-Sign
+Quando o usuário clicar no botão Novo Envelope
+E inserir o arquivo: "DocumentoTeste01.PDF"
+E inserir o arquivo: "DocumentoTeste02.PDF"
+E inserir o arquivo: "DocumentoTeste03.PDF"
+E o usuário habilitar o Toggle Unificar Anexos
+E clicar no botão Próximo na etapa Upload
+E o usuário preencher o Título do Envelope
+E inserir a Data de Expiração do Envelope para a data atual
+E selecionar o Idioma: "Português"
+E não inserir nenhum Segmento
+E não escrever nenhuma Mensagem
+E clicar no botão Próximo na etapa Configurar
+Quando o usuário clicar no botão Adicionar
+E selecionar o Signatário: "A.Eletronica Digital" no modal Adicionar Signatários à Lista
+E selecionar o Signatário: "B.Eletronica Digital" no modal Adicionar Signatários à Lista
+E selecionar o Signatário: "C.Eletronica Digital" no modal Adicionar Signatários à Lista
+E clicar no botão Adicionar à Lista de Signatários
+E selecionar o Signatário: "A.Eletronica Digital" na Lista de Signatários do Envelope
+E selecionar o Signatário: "B.Eletronica Digital" na Lista de Signatários do Envelope
+E selecionar o Signatário: "C.Eletronica Digital" na Lista de Signatários do Envelope
+E clicar no ícone de Lápis para definir tipo de assinatura
+E selecionar o Tipo de Assinatura: "Digital"
+E clicar no botão Próximo na etapa Signatário
+Quando clicar no botão Selecione o Signatário
+E selecionar o Signatário "A.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "A.Eletronica Digital" no EixoX "10" e EixoY "100"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "B.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "B.Eletronica Digital" no EixoX "10" e EixoY "200"
+E clicar no botão Selecione o Signatário
+E selecionar o Signatário "C.Eletronica Digital" para carregar a Assinatura
+E clicar no botão Assinaturas
+E posicionar manualmente a Assinatura do Signatário "C.Eletronica Digital" no EixoX "10" e EixoY "300"
+Então o usuário deverá validar se o toggle Carregar rubricas estará "desabilitado"
+E o usuário clicar no botão Próximo na etapa Assinatura
+Quando o usuário clicar no botão Enviar na etapa Revisar
+Então o sistema deverá exibir a mensagem "O envelope foi enviado com sucesso."
+E o usuário acessar o Menu Enviados
+E o usuário deverá pesquisar pelo título do Envelope na aba "Em Assinatura"
+E o sistema deverá exibir o Envelope
+E o usuário deverá clicar no botão Detalhar do Envelope
+E o sistema deverá exibir as informações do Envelope
+E o usuário deverá verificar se o Criador confere com o criador do Envelope
+E o usuário deverá verificar se a Data de Criação confere com a Data que o Envelope foi criado
+E o usuário deverá verificar se a Data de Modificação confere com a Data de Modificação do Envelope
+E o usuário deverá verificar se a Data de Expiração confere com a Data de Expiração do Envelope
+E o usuário deverá verificar se o Signatário "A.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "B.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o usuário deverá verificar se o Signatário "C.Eletronica Digital" está sendo exibido nos Detalhes no Envelope
+E o sistema deverá exibir o documento anexado "DocumentoTeste01 | DocumentoTeste02 | DocumentoTeste03.pdf"
+E o usuário deverá clicar no botão Editar do Envelope
+E o usuário deverá clicar na aba Signatários na Edição do Envelope
+E o usuário deverá verificar se a coluna Ordem não seja exibida
+E o sistema deverá exibir o Signatário "A.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "B.Eletronica Digital" com o Tipo de Assinatura "Digital"
+E o sistema deverá exibir o Signatário "C.Eletronica Digital" com o Tipo de Assinatura "Digital"
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
 ******* DOWNLOAD DE ENVELOPE ******
 
 Cenário: Download de Envelope original na etapa Assinar - Recebidos
