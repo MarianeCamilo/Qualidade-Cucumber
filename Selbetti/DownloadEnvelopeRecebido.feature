@@ -209,3 +209,26 @@ Cenário: Download de Envelope impressão na etapa de Concluídos
     E clicar no botão Impressão
     E clicar na opção Sem Carimbos
     Então o sistema irá fazer o donwload do documento do envelope
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-5 | Download de Envelope assinado na etapa de Concluídos
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    E cadastrou um Envelope sem segmentação, com o signatário Administrador
+    Quando o usuário acessar a Aba Assinar no menu Recebidos, filtrar pelo título do Envelope e assinar o Envelope
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos, filtrar pelo título do Envelope e baixar o documento Assinado
+    Então o sistema deverá fazer o download do documento
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-6 | Download de Envelope em Impressão na etapa de Concluídos
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    E cadastrou um Envelope sem segmentação, com o signatário Administrador
+    Quando o usuário acessar a Aba Assinar no menu Recebidos, filtrar pelo título do Envelope e assinar o Envelope
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos, filtrar pelo título do Envelope e baixar o documento para Impressão com Carimbos
+    Então o sistema deverá fazer o download do documento
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos, filtrar pelo título do Envelope e baixar o documento para Impressão sem Carimbos
+    Então o sistema deverá fazer o download do documento
+

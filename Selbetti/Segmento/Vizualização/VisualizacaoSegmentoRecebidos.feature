@@ -224,3 +224,78 @@ Cenário: TCV-12 | Visualização de envelope sem segmento na aba Assinados, usu
     E realizar o login no S-Sign com o usuário "ObservadorSegmento"
     Quando o usuário acessar a Aba Assinados no menu Recebidos e filtrar pelo título do Envelope
     Então o sistema deverá exibir a mensagem de resultado da pesquisa "Não encontramos nenhum envelope relacionado a sua busca."
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-13 | Visualização de envelope segmentado na aba Concluídos, usuários Administrador, PublicadorSegmento e ObservadorSegmento como signatários do envelope
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    E cadastrou um segmento sem permissões
+    E cadastrou um Envelope vinculado ao novo Segmento, com os signatários Administrador, PublicadorSegmento e ObservadorSegmento
+    Quando o usuário "Administrador" acessar a caixa de e-mail e assinar o envelope
+    Quando o usuário "PublicadorSegmento" acessar a caixa de e-mail e assinar o envelope
+    Quando o usuário "ObservadorSegmento" acessar a caixa de e-mail e assinar o envelope
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema deverá exibir o Envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "PublicadorSegmento"
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema deverá exibir o Envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "ObservadorSegmento"
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema deverá exibir o Envelope
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-14 | Visualização de envelope sem segmento na aba Concluídos, usuários Administrador, PublicadorSegmento e ObservadorSegmento como signatários do envelope
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    E cadastrou um Envelope sem segmentação, com os signatários Administrador, PublicadorSegmento e ObservadorSegmento
+    Quando o usuário "Administrador" acessar a caixa de e-mail e assinar o envelope
+    Quando o usuário "PublicadorSegmento" acessar a caixa de e-mail e assinar o envelope
+    Quando o usuário "ObservadorSegmento" acessar a caixa de e-mail e assinar o envelope
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema deverá exibir o Envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "PublicadorSegmento"
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema deverá exibir o Envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "ObservadorSegmento"
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema deverá exibir o Envelope
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-15 | Visualização de envelope segmentado na aba Concluídos, usuários Administrador, PublicadorSegmento e ObservadorSegmento não sendo signatários do envelope
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    E cadastrou um segmento sem permissões
+    E cadastrou um Envelope vinculado ao novo segmento, com o signatário PublicadorTodosSegmentos
+    Quando o usuário "PublicadorTodosSegmentos" acessar a caixa de e-mail e assinar o envelope
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema não deverá exibir o Envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "ObservadorSegmento"
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema não deverá exibir o Envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "PublicadorSegmento"
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema não deverá exibir o Envelope
+ //---------------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-16 | Visualização de envelope sem segmento na aba Concluídos, usuários Administrador, PublicadorSegmento e ObservadorSegmento não sendo signatários do envelope
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    E cadastrou um Envelope sem segmentação, com o signatário PublicadorTodosSegmentos
+    Quando o usuário "PublicadorTodosSegmentos" acessar a caixa de e-mail e assinar o envelope
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema não deverá exibir o Envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "ObservadorSegmento"
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema não deverá exibir o Envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "PublicadorSegmento"
+    Quando o usuário acessar a Aba Concluídos no menu Recebidos e filtrar pelo título do Envelope
+    Então o sistema não deverá exibir o Envelope
+   

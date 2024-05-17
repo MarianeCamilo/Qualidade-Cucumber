@@ -267,3 +267,11 @@ Cenário: Download de Envelope original na etapa Reprovados
     Então o sistema irá fazer o donwload do documento do envelope
 
 //---------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-1 | Download de Envelope original na etapa Em Assinatura
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    Quando o usuário acessar a aba "Em Assinatura" no menu "Enviados" e pesquisar pelo Envelope criado
+    E o usuário deverá clicar no botão Detalhar do Envelope
+    E o usuário deverá clicar no botão Original
+    Então o sistema deverá fazer o download do documento Original do Documento do Envelope
