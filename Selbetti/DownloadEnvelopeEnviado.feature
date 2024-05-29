@@ -275,3 +275,60 @@ Cenário: TCV-1 | Download de Envelope original na etapa Em Assinatura
     E o usuário deverá clicar no botão Detalhar do Envelope
     E o usuário deverá clicar no botão Original
     Então o sistema deverá fazer o download do documento Original do Documento do Envelope
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-2 | Download de Envelope original na etapa Em Autorização
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    Quando o usuário acessar a aba "Em Autorização" no menu "Enviados" e pesquisar pelo Envelope criado
+    E o usuário deverá clicar no botão Detalhar do Envelope
+    E o usuário deverá clicar no botão Original
+    Então o sistema deverá fazer o download do documento Original do Documento do Envelope
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-3 | Download de Envelope original na etapa Excluídos
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    Quando o usuário acessar a aba "Excluídos" no menu "Enviados" e pesquisar pelo Envelope criado
+    E o usuário deverá clicar no botão Detalhar do Envelope
+    E o usuário deverá clicar no botão Original
+    Então o sistema deverá fazer o download do documento Original do Documento do Envelope
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-4 | Download de Envelope original na etapa de Reprovados
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    Quando o usuário acessar a aba "Reprovados" no menu "Enviados" e pesquisar pelo Envelope criado
+    E o usuário deverá clicar no botão Detalhar do Envelope
+    E o usuário deverá clicar no botão Original
+    Então o sistema deverá fazer o download do documento Original do Documento do Envelope
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-5 | Download de Envelope original na etapa Concluídos
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    Quando o usuário acessar a aba "Concluídos" no menu "Enviados" e pesquisar pelo Envelope criado
+    E o usuário clicar no botão Detalhar do Envelope
+    E o usuário clicar no botão Original
+    Então o sistema deverá fazer o download do documento Original do Documento do Envelope
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-6 | Download de Envelope assinado na etapa de Concluídos
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    Quando o usuário logado acessar a aba "Assinar" no menu "Recebidos"
+    E pesquisar e assinar o Envelope
+    Quando o usuário acessar a aba "Concluídos" no menu "Enviados" e pesquisar pelo Envelope criado
+    E o usuário clicar no botão Detalhar do Envelope
+    E o usuário clicar no botão Assinado
+    Então o sistema deverá fazer o download do documento Assinado do Documento do Envelope
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-7 | Download de Envelope impressão na etapa de Concluídos
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    Quando o usuário acessar a aba "Assinar" no menu "Recebidos", filtrar pelo título do Envelope e assinar o Envelope
+    Quando o usuário acessar a aba "Concluídos" no menu "Enviados", filtrar pelo título do Envelope e baixar o documento para Impressão "Com Carimbos"
+    Então o sistema deverá fazer o download do documento com Carimbos
+    Quando o usuário acessar a aba "Concluídos" no menu "Enviados", filtrar pelo título do Envelope e baixar o documento para Impressão "Sem Carimbos"
+    Então o sistema deverá fazer o download do documento sem Carimbos
