@@ -84,4 +84,13 @@ Cenário: TCV-9 | Editar envelope e remover todos os signatários
     E selecionar e remover o signatário
     Então o sistema deverá exibir a mensagem "O envelope precisa ter ao menos 01 signatário/testemunha"
     E o sistema deverá exibir o botão "CONCLUIR EDIÇÃO" bloqueado
+//------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-8 | Criar envelope com documentos unificados totalizando mais de 70MB
+
+    Dado que o usuário "PublicadorTodosSegmentos" já realizou login no S-Sign
+    Quando o usuário clicar no botão NOVO ENVELOPE
+    E inserir dois arquivos que a somatória é maior que 70MB no step Upload
+    Então o sistema deverá exibir a mensagem "Não é possível unificar os arquivos devido à somatória de seus tamanhos exceder 70 Mb."
+    E o sistema deverá bloquear o botão Unificar Documentos
     

@@ -307,6 +307,7 @@ Cenário: TCV-4 | Download de Envelope original na etapa de Reprovados
 Cenário: TCV-5 | Download de Envelope original na etapa Concluídos
 
     Dado que o usuário "Administrador" já realizou login no S-Sign
+    Quando o usuário acessar a Aba Assinar no menu Recebidos, filtrar pelo título do Envelope e assinar o Envelope
     Quando o usuário acessar a aba "Concluídos" no menu "Enviados" e pesquisar pelo Envelope criado
     E o usuário clicar no botão Detalhar do Envelope
     E o usuário clicar no botão Original

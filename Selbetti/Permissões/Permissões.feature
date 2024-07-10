@@ -1,4 +1,6 @@
 
+...
+
 
 Cenário: TCV-1 | Validar permissões de menu usuário Administrador
 
@@ -20,6 +22,7 @@ Cenário: TCV-1 | Validar permissões de menu usuário Administrador
     Quando o usuário o usuário Voltar ao início
     E clicar no botão Suite
     Então o sistema deverá redirecionar para a Suite principal do Satelitti
+
 //------------------------------------------------------------------------------------------------------------------------------------
 
 Cenário: TCV-2 | Validar permissões de menu usuário Publicador
@@ -90,4 +93,25 @@ Cenário: TCV-6 | Observador não tem permissão de edição de envelope
     E realizar o login no S-Sign com o usuário "ObservadorSegmento"
     Quando o usuário acessar o menu Enviados e pesquisar pelo Envelope
     Então o sistema não deverá exibir o botão Editar no card do envelope
-    
+//------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-7 | Administrador tem permissão de exclusão em todos envelopes
+
+    Dado que o usuário "PublicadorTodosSegmentos" já realizou login no S-Sign
+    E criou um envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "Administrador"
+    Quando o usuário acessar o menu "Enviados" e pesquisar pelo Envelope
+    E clicar no botão Detalhar e Descartar o Envelope
+    Então o sistema deverá exibir a mensagem "Você excluiu o envelope com sucesso!"
+//------------------------------------------------------------------------------------------------------------------------------------
+
+Cenário: TCV-9 | Observador não tem permissão de exclusão de envelope
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    E criou um envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "ObservadorTodosSegmentos"
+    Quando o usuário acessar o menu "Enviados" e pesquisar pelo Envelope
+    E clicar no botão Detalhar no Card do Envelope
+    Então o sistema não deverá exibir o botão Descartar
