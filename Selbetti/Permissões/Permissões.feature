@@ -106,6 +106,19 @@ Cenário: TCV-7 | Administrador tem permissão de exclusão em todos envelopes
     Então o sistema deverá exibir a mensagem "Você excluiu o envelope com sucesso!"
 //------------------------------------------------------------------------------------------------------------------------------------
 
+Cenário: TCV-8 | Publicador tem permissão de exclusão em envelopes criados por ele
+
+    Dado que o usuário "Administrador" já realizou login no S-Sign
+    E criou um envelope
+    Quando o usuário logado sair do sistema
+    E realizar o login no S-Sign com o usuário "PublicadorTodosSegmentos"
+    Quando o usuário acessar o menu "Enviados", pesquisar e clicar no botão Detalhar no card do Envelope
+    Então o sistema deverá exibir o botão DESCARTAR desabilitado na aba Detalhes
+    Quando o usuário criar um novo Envelope
+    Quando o usuário acessar o menu "Enviados", pesquisar e clicar no botão Detalhar no card do Envelope
+    Então o sistema deverá exibir o botão DESCARTAR habilitado na aba Detalhes
+//------------------------------------------------------------------------------------------------------------------------------------
+
 Cenário: TCV-9 | Observador não tem permissão de exclusão de envelope
 
     Dado que o usuário "Administrador" já realizou login no S-Sign
